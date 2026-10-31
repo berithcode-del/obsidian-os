@@ -1,0 +1,57 @@
+<Window x:Class="ObsidianInstaller.App.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="780" Height="585" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True"
+        Background="Transparent" ShowInTaskbar="False" WindowStartupLocation="CenterScreen"
+        Opacity="0" Title="Obsidian OS">
+
+    <Border CornerRadius="16" ClipToBounds="True" BorderBrush="#4DFF6B1A" BorderThickness="1">
+        <Grid>
+            <!-- splash do sistema, como aparece no console -->
+            <Image x:Name="Plate" Stretch="UniformToFill" />
+            <Rectangle>
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#00000000" Offset="0" />
+                        <GradientStop Color="#00000000" Offset="0.52" />
+                        <GradientStop Color="#B3060709" Offset="0.78" />
+                        <GradientStop Color="#ED060709" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <!-- marca no canto, como na splash do aparelho -->
+            <StackPanel Orientation="Horizontal" Margin="28,24,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Viewbox Width="20" Height="20" Margin="0,0,9,0">
+                    <Canvas Width="32" Height="32">
+                        <Path Stroke="#FFFFFF" StrokeThickness="2" StrokeLineJoin="Round"
+                              Data="M16,2 L29,9.5 L29,22.5 L16,30 L3,22.5 L3,9.5 Z M3,9.5 L16,17 L29,9.5 M16,17 L16,30" />
+                    </Canvas>
+                </Viewbox>
+                <TextBlock Text="OBSIDIAN OS" Foreground="#FFFFFF" FontSize="11" FontWeight="Bold"
+                           FontFamily="{StaticResource HeadingFont}" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Bottom" Margin="30,0,30,26">
+                <TextBlock Text="OBSIDIAN" Foreground="#F4F3EF" FontFamily="{StaticResource HeadingFont}"
+                           FontSize="42" HorizontalAlignment="Center" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,6,0,0">
+                    <Rectangle Width="52" Height="1" Fill="#88FF6B1A" VerticalAlignment="Center" />
+                    <TextBlock Text="OS" Foreground="{StaticResource Accent}" FontFamily="{StaticResource HeadingFont}"
+                               FontSize="16" FontWeight="SemiBold" Margin="10,0" VerticalAlignment="Center" />
+                    <Rectangle Width="52" Height="1" Fill="#88FF6B1A" VerticalAlignment="Center" />
+                </StackPanel>
+                <TextBlock x:Name="Subtitle" Text="instalador do sistema" Foreground="#9C9992" FontFamily="Georgia"
+                           FontStyle="Italic" FontSize="12" HorizontalAlignment="Center" Margin="0,10,0,0" />
+
+                <Border Background="#D9040404" CornerRadius="9" Padding="16,11" Margin="0,22,0,0">
+                    <Grid>
+                        <TextBlock x:Name="Status" Text="Iniciando…" Foreground="#FFFFFF" FontSize="12" />
+                        <TextBlock Text="1.0" Foreground="#7E7B75" FontSize="10" FontWeight="Bold"
+                                   HorizontalAlignment="Right" VerticalAlignment="Center" />
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

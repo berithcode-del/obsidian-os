@@ -1,0 +1,21 @@
+{
+  "debianator_commit": "8eadfd86e2c94bf812a6644bd51b6188b586e8d7",
+  "sunxi_tools_commit": "a08a24a2aa5804bde7fa6ea8cdb08135d018da33",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/Bepok/Debianator/8eadfd86e2c94bf812a6644bd51b6188b586e8d7/uboot/ga36_defconfig",
+      "local_path": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\fontes-referencia\\debianator-ga36_defconfig",
+      "sha256": "f16dd381c67f68fe3d91c1512a324ad6ad3c8ec87cc03b486dd67ddc4756d1d5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Bepok/Debianator/8eadfd86e2c94bf812a6644bd51b6188b586e8d7/versions.env",
+      "local_path": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\fontes-referencia\\debianator-versions.env",
+      "sha256": "cd15af33dec4ccab9a0480758ec4961d6b6b6a9d329b2e97c63fe3766a7535bf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Bepok/Debianator/8eadfd86e2c94bf812a6644bd51b6188b586e8d7/README.md",
+      "local_path": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\fontes-referencia\\debianator-README.md",
+      "sha256": "04fb136bd0ca5cdf5f966e94cbcd723b8365e7ac24ca6748afa205306c9241e0"
+    }
+  ]
+}

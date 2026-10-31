@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "package_id": "obsidian-os-1-0-lab-r1",
+  "display_name": "Obsidian OS 1.0 - imagem de cartÃ£o (laboratÃ³rio)",
+  "system_version": "1.0-lab-r1",
+  "channel": "lab",
+  "customer_installation_allowed": false,
+  "distribution_review": "pending",
+  "includes_final_obsidian_launcher": true,
+  "compatible_profile_ids": [
+    "ga36-a33-rhododendron-panel1-lab"
+  ],
+  "payload": {
+    "kind": "external_reference",
+    "asset_id": "obsidian-os-1-0-lab-r1-image",
+    "sha256": "094f8e698a236d3e1db64ad4f69a2e3e2bebbb3846728595972167221c8b3fa8",
+    "image_bytes": 1073741824
+  },
+  "persistent_boot_origin": "base-goodluck-usb-proof-20261029+overlay-console-20261030",
+  "sector_bytes": 512,
+  "partitions": [
+    {
+      "role": "root",
+      "filesystem": "ext4",
+      "start_sector": 262144,
+      "sector_count": 786432
+    },
+    {
+      "role": "home",
+      "filesystem": "fat32",
+      "start_sector": 1048576,
+      "sector_count": 1048576
+    }
+  ],
+  "storage_policy": {
+    "tested_mode": "single_card",
+    "data_partition": {
+      "role": "obsidian-data",
+      "filesystem": "fat32",
+      "label": "OBSIDIAN",
+      "start_sector": 2097152,
+      "created_by": "installer (gravaÃ§Ã£o grava a imagem e em seguida cria/formata a p3)",
+      "mount_point": "/media/obsidian"
+    },
+    "home_bytes": 536870912,
+    "rom_directories": [
+      "gba",
+      "nds",
+      "snes",
+      "psx",
+      "psp",
+      "cps2",
+      "cps3"
+    ]
+  },
+  "boot_verification": {
+    "test_id": "OBSIDIAN-OS-1.0-R1-BOOT-01",
+    "identity_file": "/etc/obsidian-release",
+    "boot_report": "/home/player/obsidian-relatorio-boot.txt",
+    "status": "pending_physical_card_test"
+  },
+  "signature": {
+    "status": "not_signed_for_distribution"
+  },
+  "launcher_sha256": "de6fa0a3ac98c529c429554755cab021a5a7c85197acf8b12d4bef420165c018",
+  "build": {
+    "built_utc": "2026-10-30T22:14:24Z",
+    "base_image": "Obsisidian-prova-USB-base-goodluck-20261029.img",
+    "base_sha256": "a113b3c53a0d2c2c319f4ada65a694ccb6b16dbed053458a32669ba47b7ae7c5",
+    "overlay_sha256": "877c80860a3c4dcd22728239461da68db206d3e97810f8a2a39ed40db7706c3e",
+    "free_kib": {
+      "rootfs": 113152,
+      "home": 329428
+    },
+    "used_kib": {
+      "rootfs": 221363,
+      "home": 193820
+    }
+  }
+}

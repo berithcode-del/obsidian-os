@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "distribution_review": "pending",
+  "components": [
+    {
+      "id": "uboot-bootstrap",
+      "version": "2026.10-custom-ga36-lab",
+      "file": "assets/bootstrap/ga36-a33-rhododendron-panel1/bootstrap.bin",
+      "sha256": "433cd84c1b0c92b49afc251b543b83a5b054de682d494dae26359562ba86ccdc",
+      "source_url": "https://github.com/u-boot/u-boot/tree/5508406582f6f7120dce0c4b3059819a41788db2",
+      "license_review": "GPL and per-file licenses; corresponding source package pending",
+      "customer_distribution_approved": false
+    },
+    {
+      "id": "sunxi-fel-windows",
+      "version": "530adfa / eperie v1.3",
+      "file": "assets/native/windows-x64/sunxi-fel.exe",
+      "sha256": "cc1e338a238ab99dc0ca12bdb3558d2781f9e81ed411a9b92d1c4021a67a2acf",
+      "source_url": "https://github.com/eperie/build-scripts/releases/tag/v1.3",
+      "license_review": "GPL-2.0-or-later; license copied; complete corresponding sources/dependencies pending review",
+      "customer_distribution_approved": false
+    },
+    {
+      "id": "zadig",
+      "version": "2.9",
+      "file": null,
+      "sha256": "4ecaa95df3da3621486a043aef8b3050b8bafe7c901402871e816229ef82039b",
+      "source_url": "https://github.com/pbatard/libwdi/releases/tag/v1.5.1",
+      "license_review": "Zadig/libwdi have distinct licensing; not bundled here",
+      "customer_distribution_approved": false
+    },
+    {
+      "id": "goodluck-base-proof",
+      "version": "goodluckOS-0.1.0-usb-proof-20261029",
+      "file": null,
+      "sha256": "a113b3c53a0d2c2c319f4ada65a694ccb6b16dbed053458a32669ba47b7ae7c5",
+      "source_url": "https://github.com/CodeZombie/goodluckOS",
+      "license_review": "Mixed image contents and original-profile boot data require inventory",
+      "customer_distribution_approved": false
+    }
+  ]
+}

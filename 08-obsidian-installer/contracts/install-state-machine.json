@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "design_contract_not_implemented",
+  "initial": "Idle",
+  "success": "Succeeded",
+  "terminal_states": ["Succeeded", "Failed", "Cancelled", "NeedsRecovery"],
+  "states": {
+    "Idle": ["Detecting", "Cancelled"],
+    "Detecting": ["NeedsDriver", "NeedsProfileEvidence", "ProfileVerified", "Failed", "Cancelled"],
+    "NeedsDriver": ["Detecting", "Failed", "Cancelled"],
+    "NeedsProfileEvidence": ["Detecting", "ProfileVerified", "Failed", "Cancelled"],
+    "ProfileVerified": ["PackageVerified", "Failed", "Cancelled"],
+    "PackageVerified": ["AwaitingBootstrapConsent", "Failed", "Cancelled"],
+    "AwaitingBootstrapConsent": ["BootstrapLoading", "Cancelled", "Failed"],
+    "BootstrapLoading": ["AwaitingStorage", "Failed", "Cancelled"],
+    "AwaitingStorage": ["TargetVerified", "Failed", "Cancelled"],
+    "TargetVerified": ["AwaitingEraseConsent", "Failed", "Cancelled"],
+    "AwaitingEraseConsent": ["AwaitingElevation", "Cancelled", "Failed"],
+    "AwaitingElevation": ["Writing", "Cancelled", "Failed"],
+    "Writing": ["ReadbackVerifying", "NeedsRecovery"],
+    "ReadbackVerifying": ["PreparingStorage", "NeedsRecovery"],
+    "PreparingStorage": ["Ejecting", "NeedsRecovery"],
+    "Ejecting": ["AwaitingPowerCycle", "NeedsRecovery"],
+    "AwaitingPowerCycle": ["BootVerifying", "NeedsRecovery"],
+    "BootVerifying": ["Succeeded", "NeedsRecovery"],
+    "Succeeded": [],
+    "Failed": [],
+    "Cancelled": [],
+    "NeedsRecovery": []
+  },
+  "required_guards": {
+    "ProfileVerified": ["soc_matches", "board_and_panel_evidence_accepted", "supported_profile_selected"],
+    "PackageVerified": ["compatible_profile", "image_hash_matches", "package_signature_verified_for_customer_release"],
+    "BootstrapLoading": ["profile_and_package_still_valid", "ram_load_consent_recorded", "fel_device_session_matches"],
+    "TargetVerified": ["usb_transition_correlated", "one_unambiguous_removable_target", "system_disk_excluded", "capacity_sufficient", "target_identity_captured"],
+    "Writing": ["erase_consent_matches_plan", "uac_accepted", "immutable_plan_verified_by_helper", "target_identity_rechecked", "exclusive_volume_lock", "package_hash_rechecked"],
+    "PreparingStorage": ["full_image_readback_hash_matches", "storage_layout_supported", "changes_limited_to_authorized_target"],
+    "BootVerifying": ["real_power_cycle_requested", "new_boot_identity_matches_session"],
+    "Succeeded": ["boot_report_matches_installation_id", "system_version_matches_package", "requested_game_directories_confirmed"]
+  },
+  "notes": [
+    "Contrato do aplicativo futuro; não é um mecanismo de proteção já instalado.",
+    "Cancelamento antes da escrita não é equivalente à interrupção após a primeira escrita.",
+    "Novo ciclo de recuperação cria outra sessão e não reaproveita autorização de apagamento anterior.",
+    "Uma falha de leitura integral bloqueia preparação de armazenamento e conclusão."
+  ]
+}

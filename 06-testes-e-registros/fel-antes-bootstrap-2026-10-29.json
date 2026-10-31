@@ -1,0 +1,22 @@
+{
+  "collected_at": "2026-10-29T20:58:48.207946-03:00",
+  "operation": "AW_FEL_VERSION",
+  "status": "ok",
+  "result": {
+    "signature": "AWUSBFEX",
+    "soc_id": "0x1667",
+    "soc_name": "Allwinner A33 / R16",
+    "protocol_version": 1,
+    "scratchpad": "0x00007e00",
+    "raw_version_hex": "4157555342464558006716000100000001004408007e00000000000000000000",
+    "board_compatibility": "unverified",
+    "installation_allowed": false,
+    "fel_status_hex": "ffff000000000000",
+    "usb_vendor_id": "1f3a",
+    "usb_product_id": "efe8",
+    "usb_bus": 1,
+    "usb_address": 20,
+    "endpoint_in": "0x82",
+    "endpoint_out": "0x01"
+  }
+}

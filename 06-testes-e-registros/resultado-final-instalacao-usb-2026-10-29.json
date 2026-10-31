@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-29",
+  "result": "passed_on_tested_device",
+  "fel_soc": "0x1667",
+  "ram_boot": true,
+  "sd_over_console_usb": true,
+  "image_write_and_full_readback": true,
+  "image_sha256": "a113b3c53a0d2c2c319f4ada65a694ccb6b16dbed053458a32669ba47b7ae7c5",
+  "sd_boot_verified": true,
+  "test_id": "OBSISIDIAN-USB-20261029-01",
+  "serial_port": "COM3",
+  "backup_bytes": 15728640000,
+  "backup_last_write": "2026-10-28T17:33:14.0027161-03:00",
+  "limits": [
+    "goodluckOS base proof; full Obsisidian launcher not integrated",
+    "HOME remains 512 MiB",
+    "two-card automatic installation not tested",
+    "other hardware variants not validated",
+    "persistent boot data still derived from original profile backup"
+  ]
+}

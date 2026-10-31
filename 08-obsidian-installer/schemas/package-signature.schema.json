@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:obsidian:package-signature:v1",
+  "title": "Obsidian detached package signature v1",
+  "type": "object",
+  "required": ["schema_version", "algorithm", "key_id", "signature_base64"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "algorithm": {"const": "ecdsa-p256-sha256-der"},
+    "key_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"},
+    "signature_base64": {"type": "string", "minLength": 1, "maxLength": 2048, "pattern": "^[A-Za-z0-9+/]+={0,2}$"}
+  }
+}

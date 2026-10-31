@@ -1,0 +1,27 @@
+# Dados privados do laboratório e dos clientes
+evidence/private/**
+lab/legacy-2026-10-29/**
+# Imagens, ambientes virtuais e saídas de compilação
+*.img
+*.img.gz
+*.img.xz
+*.vhdx
+*.wsl
+bin/
+obj/
+__pycache__/
+*.pyc
+.venv/
+.vs/
+artifacts/build/
+artifacts/bootstrap-build/
+artifacts/validation-report.json
+artifacts/runtime/
+packaging/out/
+assets/images/cache/
+# Credenciais e material de assinatura
+.env
+.env.*
+*.pfx
+*.p12
+*.key

@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-29T21:07:20.5365503-03:00",
+  "disk_number": 2,
+  "unique_id": "USBSTOR\\DISK&VEN_LINUX&PROD_UMS_DISK_0&REV_FFFF\\1655415307028E27&0:DESKTOP-CVKBV4T",
+  "friendly_name": "Linux UMS disk 0",
+  "bytes": 15728640000,
+  "drive_letter": "F",
+  "volume_label": "TESTE_FEL",
+  "probe_content": "OBSISIDIAN_USB_e0236968749241d2a042ba98d896e8a8",
+  "probe_sha256": "0F441734B8969350AE7D37A18D5CDE2D4524B23E55942EA4393800BFC6BF84C1",
+  "connection": "console USB UMS loaded via FEL"
+}

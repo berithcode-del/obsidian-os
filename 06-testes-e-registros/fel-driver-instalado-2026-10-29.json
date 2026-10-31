@@ -1,0 +1,22 @@
+[
+  {
+    "KeyName": "DEVPKEY_Device_Service",
+    "Data": "WinUSB"
+  },
+  {
+    "KeyName": "DEVPKEY_Device_ProblemCode",
+    "Data": 0
+  },
+  {
+    "KeyName": "DEVPKEY_Device_DriverVersion",
+    "Data": "6.1.7600.16385"
+  },
+  {
+    "KeyName": "DEVPKEY_Device_DriverInfPath",
+    "Data": "oem16.inf"
+  },
+  {
+    "KeyName": "DEVPKEY_Device_DriverProvider",
+    "Data": "libwdi"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:obsidian:image-package:v1",
+  "title": "Obsidian image package v1",
+  "type": "object",
+  "required": ["schema_version", "package_id", "system_version", "channel", "customer_installation_allowed", "distribution_review", "compatible_profile_ids", "payload", "persistent_boot_origin", "partitions", "sector_bytes", "storage_policy", "boot_verification", "signature"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "package_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+    "system_version": {"type": "string", "minLength": 1},
+    "channel": {"enum": ["lab", "candidate", "beta", "stable"]},
+    "customer_installation_allowed": {"type": "boolean"},
+    "distribution_review": {"enum": ["pending", "approved", "rejected"]},
+    "includes_final_obsidian_launcher": {"type": "boolean"},
+    "compatible_profile_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "payload": {
+      "type": "object",
+      "required": ["kind", "sha256", "image_bytes"],
+      "properties": {
+        "kind": {"enum": ["external_reference", "bundled_file"]},
+        "asset_id": {"type": "string", "minLength": 1},
+        "file": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "image_bytes": {"type": "integer", "minimum": 512}
+      },
+      "allOf": [
+        {"if": {"properties": {"kind": {"const": "external_reference"}}}, "then": {"required": ["asset_id"]}},
+        {"if": {"properties": {"kind": {"const": "bundled_file"}}}, "then": {"required": ["file"]}}
+      ]
+    },
+    "persistent_boot_origin": {"type": "string", "minLength": 1},
+    "sector_bytes": {"enum": [512, 4096]},
+    "partitions": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "filesystem", "start_sector", "sector_count"],
+        "properties": {
+          "role": {"type": "string", "minLength": 1},
+          "filesystem": {"enum": ["ext4", "fat32", "exfat"]},
+          "start_sector": {"type": "integer", "minimum": 1},
+          "sector_count": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "storage_policy": {"type": "object", "required": ["tested_mode"], "properties": {"tested_mode": {"enum": ["single_card", "two_cards"]}}},
+    "boot_verification": {"type": "object", "required": ["test_id", "identity_file", "boot_report"]},
+    "signature": {"type": "object", "required": ["status"], "properties": {"status": {"enum": ["not_signed_for_distribution", "signed"]}}}
+  },
+  "allOf": [{"if": {"properties": {"channel": {"const": "lab"}}}, "then": {"properties": {"customer_installation_allowed": {"const": false}}}}]
+}

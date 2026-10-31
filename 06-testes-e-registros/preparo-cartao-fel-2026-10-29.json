@@ -1,0 +1,9 @@
+﻿{
+    "time":  "2026-10-29T20:12:26.0098657-03:00",
+    "phase":  "complete",
+    "detail":  "Cartao F FAT32 TESTE_FEL pronto, primeiros 128 MiB limpos e verificados antes da formatacao; area de partida conferida depois. Capacidade do volume: 15710814208 bytes.",
+    "disk_number":  2,
+    "expected_size":  15728640000,
+    "expected_unique_id":  "USBSTOR\\DISK\u0026VEN_MXT-USB\u0026PROD_STORAGE_DEVICE\u0026REV_1501\\150101V01\u00260:DESKTOP-CVKBV4T",
+    "backup_path":  "D:\\R36S-backup-sistema-2026-10-28.img"
+}

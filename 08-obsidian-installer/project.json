@@ -1,0 +1,34 @@
+{
+  "project_id": "obsidian-installer",
+  "created_on": "2026-10-29",
+  "state": "image_1_0_lab_ready_pending_physical_boot",
+  "canonical_product_name": "Obsidian Installer",
+  "historical_names": [
+    "Obsisidian OS",
+    "Obsidian OS"
+  ],
+  "target": "Windows x64 portable",
+  "recommended_stack": "C# / .NET 10 LTS / WPF",
+  "gui_implemented": true,
+  "build_validated": true,
+  "app_started": false,
+  "diagnostic_source_present": true,
+  "customer_release_available": false,
+  "write_implemented": true,
+  "write_tested_on_physical_card": false,
+  "restore_implemented": true,
+  "image_1_0": {
+    "file": "artifacts/releases/obsidian-os-1.0-r1/obsidian-os-1.0-lab-r1.img",
+    "bytes": 1073741824,
+    "sha256": "094f8e698a236d3e1db64ad4f69a2e3e2bebbb3846728595972167221c8b3fa8",
+    "manifest": "catalog/obsidian-os-1-0-lab-r1.json",
+    "channel": "lab",
+    "customer_installation_allowed": false,
+    "boot_tested_on_console": false
+  },
+  "planning_document": "PLANEJAMENTO-APLICACAO.md",
+  "installation_guide": "docs/GUIA-INSTALACAO-1.0.md",
+  "validated_knowledge": "docs/CONHECIMENTO-VALIDADO.md",
+  "profile_catalog": "profiles",
+  "image_catalog": "catalog"
+}

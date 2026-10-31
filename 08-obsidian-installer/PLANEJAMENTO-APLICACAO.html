@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obsidian Installer — planejamento da aplicação</title>
+<style>
+:root { color-scheme: light; --ink:#202932; --muted:#53616b; --line:#d8dfe3; --accent:#245c59; }
+* { box-sizing:border-box; } body { margin:0; color:var(--ink); background:#edf0f1; font:17px/1.7 system-ui,Segoe UI,sans-serif; }
+.page { max-width:1060px; margin:36px auto; padding:60px 76px; background:white; border-top:7px solid var(--accent); }
+.meta { color:var(--muted); font-size:13px; letter-spacing:.04em; margin:0 0 30px; }
+h1 { font-size:38px; line-height:1.2; letter-spacing:-.03em; margin:0 0 24px; }
+h2 { font-size:25px; line-height:1.35; margin:48px 0 18px; padding-top:12px; border-top:1px solid var(--line); }
+h3 { font-size:20px; line-height:1.4; margin-top:30px; }
+a { color:var(--accent); text-underline-offset:3px; overflow-wrap:anywhere; }
+p,li { overflow-wrap:anywhere; } li { margin:7px 0; } ul,ol { padding-left:25px; }
+table { border-collapse:collapse; width:100%; margin:24px 0; font-size:14px; line-height:1.55; }
+th,td { padding:10px 12px; border:1px solid var(--line); vertical-align:top; text-align:left; }
+th { background:#f0f5f4; } code { font-size:.88em; background:#f1f3f4; padding:2px 4px; border-radius:3px; }
+pre { padding:18px; background:#f1f3f4; overflow:auto; } pre code { padding:0; }
+blockquote { margin:24px 0; padding:4px 20px; border-left:3px solid var(--accent); color:var(--muted); }
+nav { margin:28px 0 38px; padding:20px 24px; border:1px solid var(--line); font-size:14px; }
+nav ul { margin:5px 0; } footer { font-size:13px; color:var(--muted); margin-top:50px; border-top:1px solid var(--line); padding-top:20px; }
+@media(max-width:700px) { .page { margin:0; padding:30px 22px; } h1 { font-size:30px; } table { display:block; overflow:auto; } }
+@media print { body { background:white; font-size:10.5pt; line-height:1.5; } .page { margin:0; padding:0; max-width:none; border-top:0; } nav { break-inside:avoid; } h2,h3 { break-after:avoid; } tr { break-inside:avoid; } h2 { margin-top:24pt; } a { color:inherit; } @page { size:A4; margin:18mm; } }
+</style></head><body><main class="page">
+<p class="meta">OBSIDIAN INSTALLER · PLANEJAMENTO · 29 OUT 2026</p>
+<nav aria-label="Conteúdo"><strong>Conteúdo do planejamento</strong><div class="toc">
+<ul>
+<li><a href="#1-o-que-vamos-oferecer">1. O que vamos oferecer</a></li>
+<li><a href="#2-o-que-a-prova-ja-demonstrou">2. O que a prova já demonstrou</a></li>
+<li><a href="#3-publico-e-modalidades-do-servico">3. Público e modalidades do serviço</a></li>
+<li><a href="#4-escopo-da-primeira-versao">4. Escopo da primeira versão</a><ul>
+<li><a href="#essencial-para-o-piloto">Essencial para o piloto</a></li>
+<li><a href="#evolucoes-planejadas">Evoluções planejadas</a></li>
+</ul>
+</li>
+<li><a href="#5-experiencia-do-cliente">5. Experiência do cliente</a></li>
+<li><a href="#6-aplicativo-portatil-para-windows">6. Aplicativo portátil para Windows</a></li>
+<li><a href="#7-separacao-entre-aplicativo-e-imagem">7. Separação entre aplicativo e imagem</a></li>
+<li><a href="#8-arquitetura-e-protecao-da-operacao">8. Arquitetura e proteção da operação</a></li>
+<li><a href="#9-armazenamento-e-jogos">9. Armazenamento e jogos</a></li>
+<li><a href="#10-modelo-comercial-a-validar">10. Modelo comercial a validar</a></li>
+<li><a href="#11-etapas-e-criterios-de-saida">11. Etapas e critérios de saída</a></li>
+<li><a href="#12-metricas-e-atendimento">12. Métricas e atendimento</a></li>
+<li><a href="#13-decisoes-que-precisam-ser-fechadas">13. Decisões que precisam ser fechadas</a></li>
+<li><a href="#14-proxima-implementacao-recomendada">14. Próxima implementação recomendada</a></li>
+</ul>
+</div>
+</nav>
+<h1 id="planejamento-da-aplicacao-obsidian-installer">Planejamento da aplicação — Obsidian Installer</h1>
+<p><strong>Versão do planejamento:</strong> 0.1 — 29/10/2026<br />
+<strong>Produto:</strong> aplicativo portátil Windows para instalação, recuperação e manutenção do Obsidian OS.<br />
+<strong>Situação:</strong> viabilidade técnica demonstrada em um aparelho; produto comercial em planejamento.</p>
+<h2 id="1-o-que-vamos-oferecer">1. O que vamos oferecer</h2>
+<p>O usuário conecta um console compatível, recebe uma identificação compreensível, escolhe o cartão e instala uma versão verificada do Obsidian OS. O aplicativo prepara as pastas de jogos, confere a gravação e orienta a primeira inicialização. Quem perdeu o sistema de fábrica deve poder recuperar um aparelho pertencente a um perfil homologado.</p>
+<p>O serviço comercial reúne a instalação, a compatibilidade validada, as atualizações, o diagnóstico e o atendimento. O benefício é reduzir a dificuldade de escolher firmware, drivers, ferramentas e cartões corretos. A proposta inicial é “recuperar e instalar o Obsidian OS em modelos compatíveis”, sem prometer atender qualquer aparelho vendido como R36S.</p>
+<p>O instalador e o sistema terão ciclos separados. A imagem do Obsidian OS ainda está mudando; o aplicativo deve aceitar novas versões por pacotes, sem precisar ser recompilado a cada alteração de tema ou launcher.</p>
+<h2 id="2-o-que-a-prova-ja-demonstrou">2. O que a prova já demonstrou</h2>
+<p>Em 29/10/2026, o console GA36 A33/Rhododendron com painel 1 foi detectado em FEL com cartão preparado sem sistema. Um U-Boot específico foi enviado para a RAM e apresentou o cartão ao Windows como armazenamento USB. Escrevemos e relemos uma imagem de 1 GiB pelo cabo; o SHA-256 coincidiu integralmente. Após o usuário desligar e ligar o console, lemos pela serial o identificador exclusivo gerado durante o boot da imagem instalada. As pastas de jogos foram verificadas.</p>
+<p>Essa prova utilizou a base goodluckOS compatível. A interface completa do Obsidian OS não foi integrada à imagem de prova, HOME permaneceu em 512 MiB e a cadeia de partida persistente ainda inclui dados derivados do backup do perfil. O resultado comprova o caminho de instalação no aparelho testado; não comprova um instalador público universal.</p>
+<h2 id="3-publico-e-modalidades-do-servico">3. Público e modalidades do serviço</h2>
+<table>
+<thead>
+<tr>
+<th>Modalidade</th>
+<th>Entrega</th>
+<th>Decisão inicial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instalação assistida</td>
+<td>Operador acompanha diagnóstico, instalação e primeiro boot</td>
+<td>Melhor formato para o piloto, pois permite aprender com outros aparelhos</td>
+</tr>
+<tr>
+<td>Autoatendimento</td>
+<td>Cliente executa o aplicativo com orientações e suporte por ocorrência</td>
+<td>Evoluir depois de homologar o fluxo em Windows limpo</td>
+</tr>
+<tr>
+<td>Recuperação</td>
+<td>Reinstalação de uma versão compatível após perda do sistema</td>
+<td>Incluir no núcleo técnico do produto</td>
+</tr>
+<tr>
+<td>Manutenção</td>
+<td>Diagnóstico, reinstalação e atualização do sistema/launcher</td>
+<td>Separar atualização de instalação destrutiva</td>
+</tr>
+<tr>
+<td>Uso por assistência técnica</td>
+<td>Vários atendimentos, histórico e relatórios por aparelho</td>
+<td>Possibilidade posterior, com regras de suporte e licenciamento próprias</td>
+</tr>
+<tr>
+<td>Kit offline</td>
+<td>Aplicativo e pacote de imagem aprovados, sem download durante o atendimento</td>
+<td>Planejar desde o início; publicar depois de resolver distribuição dos componentes</td>
+</tr>
+</tbody>
+</table>
+<p>Essas modalidades são propostas a validar, não contratos ou planos de cobrança já definidos. Preço, duração do suporte e canais de atendimento serão definidos com dados do piloto: tempo por atendimento, incidência de falhas, custo de distribuição, taxas de pagamento e necessidade de intervenção humana.</p>
+<p>Para o piloto, a cobrança e a confirmação do atendimento podem ocorrer fora do aplicativo. Checkout, conta obrigatória e sistema de assinaturas não devem atrasar o núcleo de instalação. Se houver direito de atualização ou atendimento contratado, ele precisa ser descrito de forma independente das licenças dos componentes de software livre.</p>
+<h2 id="4-escopo-da-primeira-versao">4. Escopo da primeira versão</h2>
+<h3 id="essencial-para-o-piloto">Essencial para o piloto</h3>
+<ol>
+<li>Identificar Windows e arquitetura suportados, portas USB e estado do driver.</li>
+<li>Detectar FEL e consultar o SoC sem gravar o aparelho.</li>
+<li>Relacionar as evidências a um perfil de hardware aprovado, bloqueando os casos desconhecidos.</li>
+<li>Preparar o driver apenas para o dispositivo correto quando necessário.</li>
+<li>Carregar o bootstrap aprovado na RAM e correlacionar o novo disco USB ao console da sessão.</li>
+<li>Selecionar uma imagem local ou um pacote de atualização com versão e integridade verificadas.</li>
+<li>Apresentar cartão de destino, conteúdo que será apagado e etapas previstas antes da confirmação.</li>
+<li>Executar a gravação por um componente administrativo restrito e conferir a releitura.</li>
+<li>Preparar armazenamento e pastas de jogos conforme o modo homologado.</li>
+<li>Orientar o reinício e verificar o sistema efetivamente iniciado.</li>
+<li>Salvar um relatório local e oferecer exportação para suporte.</li>
+</ol>
+<p>O primeiro piloto pode atender um cartão e um perfil. A identificação da capacidade do cartão deve ser dinâmica; a regra fixa de 16 GB usada na prova não pertence ao produto final.</p>
+<h3 id="evolucoes-planejadas">Evoluções planejadas</h3>
+<ul>
+<li>Um cartão com sistema e jogos utilizando o espaço disponível.</li>
+<li>Dois cartões, com escolha explícita entre preservar, migrar ou preparar o cartão de jogos.</li>
+<li>Reinstalação com opção de recuperar saves/configurações quando a origem estiver legível.</li>
+<li>Atualização apenas do launcher, quando kernel, layout e interfaces permanecerem compatíveis.</li>
+<li>Catálogo de perfis e pacotes por canal de versão.</li>
+<li>Diagnóstico e relatórios para assistências técnicas.</li>
+<li>Alternativa por leitor de cartões quando a instalação por USB não for aplicável.</li>
+</ul>
+<p>Aparelhos Rockchip, A23 e outras famílias exigem seus próprios perfis e validações. “Clone” não será uma autorização técnica para instalar.</p>
+<h2 id="5-experiencia-do-cliente">5. Experiência do cliente</h2>
+<p>O fluxo terá seis telas principais: <strong>Conectar</strong>, <strong>Verificar compatibilidade</strong>, <strong>Escolher versão</strong>, <strong>Preparar cartões</strong>, <strong>Instalar</strong> e <strong>Confirmar funcionamento</strong>. O aplicativo deve mostrar ações concretas, como trocar de porta, usar cabo de dados, ligar sem cartão inicializável ou confirmar a solicitação do Windows.</p>
+<p>Na etapa de compatibilidade, a interface distingue “processador identificado”, “perfil confirmado” e “variante ainda não atendida”. Se o dispositivo estiver em FEL, o nome comercial da carcaça não basta para avançar. Quando não houver evidências suficientes, o fluxo encaminha para identificação assistida; não tenta vários carregadores aleatoriamente.</p>
+<p>A confirmação de apagamento fica associada ao cartão exato. Após uma reconexão, o aplicativo revalida a identidade antes de continuar. Letras como F: e números como Disco 2 são apresentados ao cliente apenas como informação auxiliar, nunca como identidade persistente.</p>
+<p>O progresso separa download, extração, preparação, escrita, sincronização, releitura e boot. Uma falha de gravação não aparece como instalação concluída. Se o cliente cancelar a solicitação administrativa, a interface volta a um estado recuperável e oferece tentar novamente; não fica aguardando silenciosamente.</p>
+<h2 id="6-aplicativo-portatil-para-windows">6. Aplicativo portátil para Windows</h2>
+<p>Recomendação inicial: <strong>C# com .NET 10 LTS e WPF</strong>, publicação autossuficiente para Windows x64. A escolha atende ao foco exclusivo em Windows e ao acesso às APIs nativas de USB, discos e elevação. O .NET 10 consta como LTS com suporte até novembro de 2028; a publicação autossuficiente evita exigir a instalação prévia do runtime. <a href="https://learn.microsoft.com/dotnet/core/releases-and-support">Suporte .NET</a>, <a href="https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/">publicação em arquivo único</a>.</p>
+<p>“Portátil” significa poder abrir a aplicação a partir de uma pasta distribuída ou executável inicial, sem instalar Python, WSL ou ferramentas de desenvolvimento. Isso não elimina a instalação inicial do driver quando necessária, a confirmação administrativa de gravação nem o uso de cache e relatórios locais. A apresentação comercial precisa refletir essa diferença.</p>
+<p>Para o piloto, um ZIP portátil com executável principal, helper administrativo, componentes nativos e licenças é mais simples de auditar do que esconder todos os componentes em um único arquivo. Uma versão com executável inicial único pode extrair recursos verificados posteriormente. O formato final será decidido por testes de assinatura, extração, antivírus e atualização, não apenas pela aparência de “um arquivo”.</p>
+<p>A prévia Windows já apresenta as seis etapas planejadas — conexão, compatibilidade, escolha da versão, preparação dos cartões, instalação e confirmação do primeiro boot. A navegação deixa claro o que ainda está bloqueado: reconhecimento aprofundado, leitura de discos/cartões, gravação e confirmação do sistema iniciado. Diagnóstico USB manual e conferência local de manifesto/imagem estão disponíveis. A solução compilou em Release com .NET SDK 10.0.403, sem avisos ou erros. O SDK fica isolado no perfil de desenvolvimento e não será incluído no aplicativo. A janela não foi iniciada; falta validação visual, integração do mecanismo de instalação e publicação para clientes.</p>
+<h2 id="7-separacao-entre-aplicativo-e-imagem">7. Separação entre aplicativo e imagem</h2>
+<p>Cada pacote deve informar versão do sistema, canal, perfil permitido, tamanho da imagem expandida, SHA-256, layout esperado, política de armazenamento, versão mínima do instalador e procedimento de validação do boot. Pacotes distribuídos precisam de autenticidade verificável, além do hash: um hash obtido junto de um arquivo adulterado não estabelece confiança.</p>
+<p>Os canais serão <strong>laboratório</strong>, <strong>candidato</strong>, <strong>beta</strong> e <strong>estável</strong>. Uma alteração na imagem cria uma versão nova; o pacote já homologado permanece imutável. A seleção “mais recente” deve resolver um pacote aprovado para o perfil, não apontar para um arquivo que está sendo alterado por outro processo.</p>
+<p>O perfil do bootstrap, o pacote do sistema e o pacote do launcher são objetos distintos. A mudança visual do Obsidian OS não obriga a substituir o carregador temporário comprovado. A mudança de kernel, serviços, assinatura de boot ou layout exige nova classificação e ensaios pertinentes.</p>
+<p>Durante o desenvolvimento atual, o modo de laboratório poderá importar uma imagem local e calcular seu hash. Isso produz um candidato privado, não uma versão autorizada para distribuição. O instalador final também deve reconhecer quando uma operação é uma atualização de arquivos ou uma regravação completa.</p>
+<h2 id="8-arquitetura-e-protecao-da-operacao">8. Arquitetura e proteção da operação</h2>
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicação WPF</td>
+<td>Orientação, seleção e acompanhamento, executados como usuário comum</td>
+</tr>
+<tr>
+<td>Núcleo de instalação</td>
+<td>Estados, plano imutável, compatibilidade e critérios de sucesso</td>
+</tr>
+<tr>
+<td>Integração Windows</td>
+<td>PnP, WinUSB, correlação USB, discos, volumes e remoção segura</td>
+</tr>
+<tr>
+<td>Helper administrativo</td>
+<td>Executar apenas o plano autorizado: driver, bloqueio, gravação, sincronização e verificação</td>
+</tr>
+<tr>
+<td>Pacotes</td>
+<td>Catálogo, download, extração, hashes, assinaturas e compatibilidade de versão</td>
+</tr>
+</tbody>
+</table>
+<p>O helper não recebe comandos de terminal arbitrários nem confia apenas no número do disco enviado pela interface. Ele confere novamente o alvo, a imagem e o perfil imediatamente antes da operação. A comunicação entre interface e helper deve ser limitada à sessão e ao usuário esperados, com permissões de canal e identificação da tentativa.</p>
+<p>As assinaturas, o conteúdo correspondente dos componentes e o mecanismo de atualização serão requisitos de distribuição. Isso não autoriza desabilitar proteções do Windows. O driver do FEL merece um fluxo próprio: na prova, o Windows apresentou código 28 e foi necessário associar WinUSB. A ROM do chip é fixa; não podemos presumir que ela forneça descritores para instalação automática. <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/automatic-installation-of-winusb">Documentação WinUSB</a>.</p>
+<h2 id="9-armazenamento-e-jogos">9. Armazenamento e jogos</h2>
+<p>O modo de um cartão precisa expandir ou criar uma área de dados compatível com a imagem e com o launcher. Hoje a imagem de prova possui raiz ext4 de 384 MiB e HOME FAT32 de 512 MiB, deixando espaço sem aproveitamento em um cartão de 16 GB. Essa expansão é requisito do produto, não resultado da prova já realizada.</p>
+<p>No modo de dois cartões, a escrita do sistema e a preparação da biblioteca são operações independentes. Um TF2 já contendo jogos não deve ser formatado por padrão. Quando houver armazenamento interno, ele precisa ser distinguido dos cartões removíveis. A ordem <code>mmcblk0/mmcblk1</code> pode variar entre hardware e kernel.</p>
+<p>As pastas da biblioteca serão declaradas pelo pacote: por exemplo, <code>roms/gba</code>, <code>roms/nds</code>, <code>roms/snes</code>, <code>roms/psx</code>, <code>roms/psp</code>, <code>roms/cps2</code> e <code>roms/cps3</code>. O launcher precisa resolver a raiz da biblioteca nos dois modos; os caminhos fixos encontrados no desenvolvimento atual precisam ser removidos antes de prometer esse suporte.</p>
+<p>Criar uma pasta não comprova disponibilidade ou desempenho do emulador. FAT32 já funcionou na configuração testada; arquivos maiores que 4 GiB e outros sistemas de arquivos exigem uma política e testes próprios. O serviço pode preparar a estrutura, sem depender da distribuição de coleções pessoais de jogos, BIOS ou emuladores proprietários.</p>
+<h2 id="10-modelo-comercial-a-validar">10. Modelo comercial a validar</h2>
+<p>O piloto deve medir a disposição de pagar pela recuperação e conveniência, a dificuldade real do cliente e o custo do atendimento. Os modelos possíveis são cobrança por instalação assistida, pacote de instalação com período de suporte e licença de operação para assistências técnicas. A escolha depende dos dados, não de uma estimativa de mercado ainda inexistente.</p>
+<p>O custo por atendimento deve incluir tempo de suporte, distribuição das imagens, meios de pagamento, assinatura de software, manutenção e incidentes. Registrar também atendimentos incompatíveis encerrados antes da instalação. Não estimamos volume de vendas, tamanho do mercado brasileiro ou preço final sem pesquisa específica.</p>
+<p>A documentação GNU admite comercialização de software livre e descreve condições para sua distribuição. O inventário de componentes e o fornecimento das fontes correspondentes precisam ser resolvidos antes da entrega comercial; a licença do aplicativo próprio ainda não foi escolhida. Separar executáveis em processos não resolve, por si só, todas as decisões de licenciamento. <a href="https://www.gnu.org/licenses/gpl-faq.en.html#DoesTheGPLAllowMoney">FAQ oficial GNU</a>.</p>
+<p>O posicionamento deve oferecer instalação, recuperação, organização e suporte com critérios claros. Não prometer salvar dados ilegíveis, compatibilidade com qualquer clone, desempenho de todos os emuladores ou continuidade ilimitada de suporte.</p>
+<h2 id="11-etapas-e-criterios-de-saida">11. Etapas e critérios de saída</h2>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Resultado esperado</th>
+<th>Critério de saída</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0 — conhecimento e organização</td>
+<td>Projeto independente e evidências rastreáveis</td>
+<td>Documentação, hashes e validação local disponíveis</td>
+</tr>
+<tr>
+<td>P1 — pacote do Obsidian OS</td>
+<td>Imagem candidata completa, com identidade e política de dados</td>
+<td>Boot, launcher e bibliotecas verificados com pacote imutável</td>
+</tr>
+<tr>
+<td>P2 — diagnóstico Windows</td>
+<td>Aplicativo portátil detecta modos e identifica lacunas</td>
+<td>Teste em Windows limpo, incluindo driver ausente e UAC cancelado</td>
+</tr>
+<tr>
+<td>P3 — instalação guiada em um cartão</td>
+<td>Fluxo completo sem terminal para o cliente</td>
+<td>Destino protegido, gravação conferida, reinício orientado e boot confirmado</td>
+</tr>
+<tr>
+<td>P4 — capacidade e recuperação</td>
+<td>Área de jogos expandida e retomada de falhas definida</td>
+<td>Ensaios com capacidades diferentes e interrupções em cada fase</td>
+</tr>
+<tr>
+<td>P5 — dois cartões e novos perfis</td>
+<td>Operações separadas de sistema e jogos</td>
+<td>Cartão com dados preservados e perfil de cada variante aprovado</td>
+</tr>
+<tr>
+<td>P6 — piloto comercial</td>
+<td>Atendimento limitado e mensurável</td>
+<td>Critérios de suporte, componentes redistribuíveis, assinaturas e evidências de qualidade concluídos</td>
+</tr>
+</tbody>
+</table>
+<p>Meta inicial proposta de homologação: repetir instalações com cartões de marcas/capacidades diferentes e, antes de ampliar o atendimento ao público, testar mais de uma unidade física. Os números de unidades e repetições serão fechados no plano de homologação; uma repetição no mesmo aparelho não equivale a validar uma nova placa.</p>
+<p>Não fixamos prazo de venda nesta etapa. A estimativa de esforço vem depois de resolver pacote do sistema, instalação do driver e políticas de armazenamento. Esses itens têm mais incerteza que a montagem das telas.</p>
+<h2 id="12-metricas-e-atendimento">12. Métricas e atendimento</h2>
+<p>Registrar por tentativa: versão do aplicativo, perfil, versões e hashes dos componentes, fases executadas, tempos, resultado, necessidade de intervenção e motivo de falha. Não coletar nomes de jogos, conteúdo de ROMs, documentos do PC ou imagens integrais do cartão para telemetria.</p>
+<p>O relatório fica local por padrão. Uma exportação para suporte deve mostrar o conteúdo e permitir remover identificadores de hardware e caminhos pessoais. Pagamentos e histórico de atendimento não precisam armazenar o conteúdo do cartão. Política de retenção, consentimento e acesso ao suporte devem ser definidos antes do piloto comercial.</p>
+<p>Indicadores do piloto: conclusão por perfil, falha de driver, cancelamento de elevação, interrupções, falhas na releitura, boot não confirmado, tempo por atendimento e contatos de suporte. O termo “instalação concluída” depende da verificação de boot ou de uma indicação explícita de que o cliente ainda não confirmou essa etapa.</p>
+<h2 id="13-decisoes-que-precisam-ser-fechadas">13. Decisões que precisam ser fechadas</h2>
+<ul>
+<li>Qual imagem candidata do Obsidian OS será a primeira base comercial e como será produzida de forma repetível?</li>
+<li>Como substituir ou regularizar a cadeia persistente de partida hoje derivada do backup do perfil?</li>
+<li>Quais evidências identificam a placa antes de executar um bootstrap em um aparelho desconhecido?</li>
+<li>O primeiro piloto será assistido, com um cartão e um perfil, conforme proposto?</li>
+<li>Como serão preservados e migrados saves/configurações numa reinstalação?</li>
+<li>Qual será o modelo de suporte e cobrança, e qual licença será adotada no código próprio?</li>
+<li>Quais versões de Windows, arquiteturas e capacidades de cartão serão efetivamente homologadas?</li>
+</ul>
+<h2 id="14-proxima-implementacao-recomendada">14. Próxima implementação recomendada</h2>
+<p>Concluir o contrato do pacote da imagem enquanto o sistema continua evoluindo. Em paralelo, implementar a aplicação Windows primeiro em modo de diagnóstico e seleção de pacote. Migrar a gravação validada para um helper com alvos dinâmicos e plano restrito. Só então integrar o fluxo completo de um cartão, expansão de espaço e confirmação do boot.</p>
+<p>O próximo marco não é adicionar pagamento: é reproduzir a prova atual por uma interface clara, em outro Windows e com outro cartão, usando uma imagem candidata identificada do Obsidian OS.</p>
+<footer>Cópia de leitura gerada de PLANEJAMENTO-APLICACAO.md. A prévia Windows compilou localmente; o pacote para clientes e a homologação comercial ainda estão pendentes.</footer>
+</main></body></html>

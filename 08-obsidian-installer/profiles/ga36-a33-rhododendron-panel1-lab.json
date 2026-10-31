@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "profile_id": "ga36-a33-rhododendron-panel1-lab",
+  "display_name": "GA36 A33 Rhododendron — painel 1 (laboratório)",
+  "validation_level": "single_device_lab",
+  "customer_installation_allowed": false,
+  "soc_id": "0x1667",
+  "soc_family": "Allwinner A33 / R16",
+  "physical_board_revision": null,
+  "panel": 1,
+  "factory_script_sha256": "4bdfa6b7deacf59d821063accdd5bf7789c70d240dc695fffa3e16f2e83dba6c",
+  "pre_boot_identification": {
+    "requires_profile_evidence": true,
+    "soc_id_alone_is_sufficient": false,
+    "unknown_device_method": "not_yet_homologated"
+  },
+  "usb_ids": {
+    "fel": "1f3a:efe8",
+    "bootstrap_ums": "1f3a:1010",
+    "running_system": "1d6b:0104"
+  },
+  "bootstrap": {
+    "file": "assets/bootstrap/ga36-a33-rhododendron-panel1/bootstrap.bin",
+    "sha256": "433cd84c1b0c92b49afc251b543b83a5b054de682d494dae26359562ba86ccdc",
+    "bytes": 528912,
+    "uboot_commit": "5508406582f6f7120dce0c4b3059819a41788db2",
+    "persistence": "ram_only",
+    "video_enabled": false,
+    "environment_persistent": false,
+    "tested_mmc_index": 0
+  },
+  "hardware_parameters": {
+    "dram_mhz": 552,
+    "dram_zq": 15291,
+    "dram_odt": true,
+    "cpu_mhz": 1008,
+    "dcdc1_mv": 3300,
+    "dcdc2_mv": 1100,
+    "dcdc3_mv": 1200,
+    "dcdc4_mv": 0,
+    "dcdc5_mv": 1500,
+    "aldo2_mv": 2500,
+    "aldo3_mv": 3000,
+    "dldo3_mv": 3000
+  },
+  "validation": {
+    "date": "2026-10-29",
+    "physical_unit_count": 1,
+    "tested_card_bytes": [
+      15728640000
+    ],
+    "ram_boot": true,
+    "sd_usb_write_read": true,
+    "full_image_write_readback": true,
+    "sd_boot": true,
+    "automatic_two_card_install": false,
+    "home_expansion": false,
+    "evidence": "evidence/private/2026-10-29/resultado-final-instalacao-usb-2026-10-29.json"
+  }
+}

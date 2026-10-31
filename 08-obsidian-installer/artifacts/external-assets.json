@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "development_references_only": true,
+  "assets": [
+    {
+      "asset_id": "usb-proof-image-20261029",
+      "location": "../02-imagens-personalizadas/Obsisidian-prova-USB-base-goodluck-20261029.img",
+      "bytes": 1073741824,
+      "sha256": "a113b3c53a0d2c2c319f4ada65a694ccb6b16dbed053458a32669ba47b7ae7c5",
+      "copied_into_project": false,
+      "note": "Imagem congelada da prova; launcher final não integrado."
+    },
+    {
+      "asset_id": "goodluck-tested-source-panel1",
+      "location": "../02-imagens-personalizadas/goodluckOS-GA36-A33-Rhododendron-painel1.img",
+      "bytes": 1073741824,
+      "sha256": "4077a465e548971a83a58a965e2bfd19ef0e2ad29d3ad20c39c354ba3478557a",
+      "copied_into_project": false,
+      "note": "Fonte compatível da imagem de prova."
+    },
+    {
+      "asset_id": "factory-backup",
+      "location": "D:/R36S-backup-sistema-2026-10-28.img",
+      "bytes": 15728640000,
+      "sha256": null,
+      "copied_into_project": false,
+      "note": "Presença e tamanho conferidos; restauração integral de fábrica ainda não testada."
+    },
+    {
+      "asset_id": "obsidian-os-1-0-lab-r1-image",
+      "location": "artifacts/releases/obsidian-os-1.0-r1/obsidian-os-1.0-lab-r1.img",
+      "bytes": 1073741824,
+      "sha256": "094f8e698a236d3e1db64ad4f69a2e3e2bebbb3846728595972167221c8b3fa8",
+      "copied_into_project": true,
+      "note": "Imagem Obsidian OS 1.0 de laboratório com launcher final, home limpa e sem conteúdo pessoal."
+    }
+  ]
+}

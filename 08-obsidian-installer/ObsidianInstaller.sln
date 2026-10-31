@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsidianInstaller.Core", "src\ObsidianInstaller.Core\ObsidianInstaller.Core.csproj", "{9FC3C8BE-6AF9-4C8A-9D01-2309F0CBCE11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsidianInstaller.Windows", "src\ObsidianInstaller.Windows\ObsidianInstaller.Windows.csproj", "{2A3C61F7-8C39-4E30-9AB2-12F170ADEAE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsidianInstaller.App", "src\ObsidianInstaller.App\ObsidianInstaller.App.csproj", "{0D048F1C-3DB6-4E70-BDBD-D2DE72C4EA9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FC3C8BE-6AF9-4C8A-9D01-2309F0CBCE11}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9FC3C8BE-6AF9-4C8A-9D01-2309F0CBCE11}.Debug|x64.Build.0 = Debug|Any CPU
+		{9FC3C8BE-6AF9-4C8A-9D01-2309F0CBCE11}.Release|x64.ActiveCfg = Release|Any CPU
+		{9FC3C8BE-6AF9-4C8A-9D01-2309F0CBCE11}.Release|x64.Build.0 = Release|Any CPU
+		{2A3C61F7-8C39-4E30-9AB2-12F170ADEAE7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2A3C61F7-8C39-4E30-9AB2-12F170ADEAE7}.Debug|x64.Build.0 = Debug|Any CPU
+		{2A3C61F7-8C39-4E30-9AB2-12F170ADEAE7}.Release|x64.ActiveCfg = Release|Any CPU
+		{2A3C61F7-8C39-4E30-9AB2-12F170ADEAE7}.Release|x64.Build.0 = Release|Any CPU
+		{0D048F1C-3DB6-4E70-BDBD-D2DE72C4EA9C}.Debug|x64.ActiveCfg = Debug|x64
+		{0D048F1C-3DB6-4E70-BDBD-D2DE72C4EA9C}.Debug|x64.Build.0 = Debug|x64
+		{0D048F1C-3DB6-4E70-BDBD-D2DE72C4EA9C}.Release|x64.ActiveCfg = Release|x64
+		{0D048F1C-3DB6-4E70-BDBD-D2DE72C4EA9C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+EndGlobal

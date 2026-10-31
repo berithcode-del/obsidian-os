@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# Repositório do Obsidian OS: apenas código, ferramentas, documentação e site.
+# Imagens de cartão, builds, ROMs, livros e evidências ficam fora do Git e são
+# distribuídas como anexos de Release (limite de 2 GB por arquivo no GitHub).
+# ---------------------------------------------------------------------------
+
+# imagens de cartão e derivados (vão nas Releases, nunca no histórico)
+*.img
+*.bin.bak
+*.dd
+*.raw
+
+# artefatos de build
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.dll
+*.exe
+
+# saídas do instalador e da release
+08-obsidian-installer/packaging/out/
+08-obsidian-installer/build/
+08-obsidian-installer/artifacts/releases/
+release/
+**/work/
+*.zip
+*.7z
+
+# pastas pesadas do projeto (não fazem parte do produto)
+01-projeto/
+02-imagens-personalizadas/
+03-imagens-base/
+04-ferramentas/
+05-downloads-incompletos/
+07-REA/
+Roms/
+Livros/
+Rufus/
+.codex-remote-attachments/
+temas-conceitos/
+site-obsidian-publicacao/
+
+# capturas soltas na raiz e telas de QA
+/interface
+/Imagem do ChatGPT*.png
+site-obsidian-os/qa/*.png
+
+# evidências e material privado
+evidence/private/
+**/backups/
+**/*.before-*
+*.log
+*.tmp
+
+# sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+.vs/
+.idea/
+node_modules/
+__pycache__/
+*.pyc
+.env

@@ -1,0 +1,11 @@
+{
+  "status": "preparing",
+  "version": null,
+  "installer": {
+    "url": null,
+    "fileName": null,
+    "sha256": null,
+    "platform": "Windows 10/11, 64 bits"
+  },
+  "supportProfile": null
+}

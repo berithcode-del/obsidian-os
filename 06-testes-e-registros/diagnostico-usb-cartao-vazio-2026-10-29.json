@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "product": "Obsisidian OS",
+  "collected_at": "2026-10-29T20:13:55.0798889-03:00",
+  "collection_status": "ok",
+  "assessment": {
+    "state": "candidates_require_identification",
+    "compatibility": "unverified",
+    "installation_allowed": false,
+    "candidate_count": 1,
+    "candidates": [
+      {
+        "kind": "allwinner_fel_candidate",
+        "meaning": "ID de recuperacao Allwinner FEL; processador e placa ainda nao confirmados.",
+        "vendor_id": "1F3A",
+        "product_id": "EFE8",
+        "instance_id": "USB\\VID_1F3A&PID_EFE8\\5&16ACEB2E&0&1",
+        "friendly_name": "",
+        "device_class": "",
+        "windows_status": "Error"
+      }
+    ],
+    "next_step": "Correlacionar ao conectar/desconectar o console; depois confirmar SoC, placa e painel.",
+    "limits": [
+      "VID/PID e nome USB nao comprovam que seja um GA36 ou um clone compativel.",
+      "FEL enumerado nao comprova inicializacao em RAM nem acesso aos cartoes.",
+      "Este diagnostico nao instala drivers, envia comandos ou altera armazenamento."
+    ]
+  }
+}

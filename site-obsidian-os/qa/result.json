@@ -1,0 +1,14 @@
+{
+  "result": "passed",
+  "menus": 8,
+  "themes": 4,
+  "widths": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "release_validation": "passed",
+  "browser_errors": []
+}

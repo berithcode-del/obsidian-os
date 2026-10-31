@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "package_id": "goodluck-base-usb-proof-20261029",
+  "display_name": "Base goodluckOS — prova USB aprovada em laboratório",
+  "system_version": "goodluckOS-0.1.0-usb-proof-20261029",
+  "channel": "lab",
+  "customer_installation_allowed": false,
+  "distribution_review": "pending",
+  "includes_final_obsidian_launcher": false,
+  "compatible_profile_ids": [
+    "ga36-a33-rhododendron-panel1-lab"
+  ],
+  "payload": {
+    "kind": "external_reference",
+    "asset_id": "usb-proof-image-20261029",
+    "sha256": "a113b3c53a0d2c2c319f4ada65a694ccb6b16dbed053458a32669ba47b7ae7c5",
+    "image_bytes": 1073741824
+  },
+  "persistent_boot_origin": "factory_profile_backup",
+  "partitions": [
+    {
+      "role": "root",
+      "filesystem": "ext4",
+      "start_sector": 262144,
+      "sector_count": 786432
+    },
+    {
+      "role": "home",
+      "filesystem": "fat32",
+      "start_sector": 1048576,
+      "sector_count": 1048576
+    }
+  ],
+  "sector_bytes": 512,
+  "storage_policy": {
+    "tested_mode": "single_card",
+    "home_expansion_implemented": false,
+    "home_bytes": 536870912,
+    "rom_directories": [
+      "gba",
+      "nds",
+      "snes",
+      "psx",
+      "psp",
+      "cps2",
+      "cps3"
+    ]
+  },
+  "boot_verification": {
+    "test_id": "OBSISIDIAN-USB-20261029-01",
+    "identity_file": "/etc/obsisidian-usb-test-id",
+    "boot_report": "/home/player/obsisidian-usb-installacao.txt"
+  },
+  "signature": {
+    "status": "not_signed_for_distribution"
+  }
+}

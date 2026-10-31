@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "product": "Obsisidian OS",
+  "collected_at": "2026-10-29T20:12:59.4248392-03:00",
+  "collection_status": "ok",
+  "assessment": {
+    "state": "no_known_usb_id",
+    "compatibility": "unverified",
+    "installation_allowed": false,
+    "candidate_count": 0,
+    "candidates": [],
+    "next_step": "Nenhum ID conhecido presente nesta coleta. Isso nao determina compatibilidade ou defeito.",
+    "limits": [
+      "VID/PID e nome USB nao comprovam que seja um GA36 ou um clone compativel.",
+      "FEL enumerado nao comprova inicializacao em RAM nem acesso aos cartoes.",
+      "Este diagnostico nao instala drivers, envia comandos ou altera armazenamento."
+    ]
+  }
+}

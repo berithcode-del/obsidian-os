@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:obsidian:hardware-profile:v1",
+  "title": "Obsidian hardware profile v1",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "validation_level", "customer_installation_allowed", "soc_id", "pre_boot_identification", "usb_ids", "bootstrap", "hardware_parameters", "validation"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "profile_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+    "display_name": {"type": "string", "minLength": 1},
+    "validation_level": {"enum": ["single_device_lab", "pilot", "homologated"]},
+    "customer_installation_allowed": {"type": "boolean"},
+    "soc_id": {"type": "string", "pattern": "^0x[0-9a-f]{4}$"},
+    "factory_script_sha256": {"$ref": "#/$defs/sha256"},
+    "pre_boot_identification": {
+      "type": "object",
+      "required": ["requires_profile_evidence", "soc_id_alone_is_sufficient", "unknown_device_method"],
+      "properties": {
+        "requires_profile_evidence": {"const": true},
+        "soc_id_alone_is_sufficient": {"const": false},
+        "unknown_device_method": {"type": "string", "minLength": 1}
+      }
+    },
+    "usb_ids": {
+      "type": "object",
+      "required": ["fel", "bootstrap_ums", "running_system"],
+      "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{4}:[0-9a-f]{4}$"}
+    },
+    "bootstrap": {
+      "type": "object",
+      "required": ["file", "sha256", "bytes", "uboot_commit", "persistence", "environment_persistent", "tested_mmc_index"],
+      "properties": {
+        "file": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "uboot_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "persistence": {"const": "ram_only"},
+        "environment_persistent": {"const": false},
+        "video_enabled": {"type": "boolean"},
+        "tested_mmc_index": {"type": "integer", "minimum": 0}
+      }
+    },
+    "hardware_parameters": {"type": "object", "minProperties": 1},
+    "validation": {
+      "type": "object",
+      "required": ["date", "physical_unit_count", "ram_boot", "full_image_write_readback", "sd_boot"],
+      "properties": {
+        "date": {"type": "string", "format": "date"},
+        "physical_unit_count": {"type": "integer", "minimum": 1},
+        "ram_boot": {"type": "boolean"},
+        "full_image_write_readback": {"type": "boolean"},
+        "sd_boot": {"type": "boolean"},
+        "evidence": {"type": "string"}
+      }
+    }
+  },
+  "allOf": [{"if": {"properties": {"validation_level": {"const": "single_device_lab"}}}, "then": {"properties": {"customer_installation_allowed": {"const": false}}}}],
+  "$defs": {"sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

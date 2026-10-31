@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-29",
+  "operation": "copy_only",
+  "entries": [
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\TESTE-INSTALACAO-USB-2026-10-29.md",
+      "target": "evidence/private/2026-10-29/TESTE-INSTALACAO-USB-2026-10-29.md",
+      "bytes": 8292,
+      "sha256": "deb0e4cfac373e507b571cb55c7d7b25212401b8991790afca967e02338aebee"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\RESULTADO-TESTE-FEL-2026-10-29.md",
+      "target": "evidence/private/2026-10-29/RESULTADO-TESTE-FEL-2026-10-29.md",
+      "bytes": 5510,
+      "sha256": "0df3d36192b5fd61c8747db4835b4288cb7674bb1d4f7f956707d260ab5f323f"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\resultado-final-instalacao-usb-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/resultado-final-instalacao-usb-2026-10-29.json",
+      "bytes": 757,
+      "sha256": "a498daad92bab4554040d103f3a9d53fa1dec9ec8dab361d3c7c56b7c18a1690"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\diagnostico-usb-instalador-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/diagnostico-usb-instalador-2026-10-29.json",
+      "bytes": 1057,
+      "sha256": "ccceb18b78841c318dfdf36602fd04a19d2103f2aebc0afa9daa4b567baf0d85"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\diagnostico-usb-antes-teste-fel-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/diagnostico-usb-antes-teste-fel-2026-10-29.json",
+      "bytes": 714,
+      "sha256": "ae68b321a84efa91be08f6a8328e6fd7172a90a59b33a3166f5553b21e581b82"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\diagnostico-usb-cartao-vazio-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/diagnostico-usb-cartao-vazio-2026-10-29.json",
+      "bytes": 1117,
+      "sha256": "bcd577b17b754d118d820cce2ae2f52a977e83a7dd10cca68c28adb3b4ac09c0"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\fel-driver-instalado-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/fel-driver-instalado-2026-10-29.json",
+      "bytes": 407,
+      "sha256": "f2fa5c067c99243ebdf0f40079bb8f5f9e839887a6ab5b3434cf6e7b9eb48a5c"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\fel-versao-processador-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/fel-versao-processador-2026-10-29.json",
+      "bytes": 663,
+      "sha256": "1a61c4b2cc2f8041a0a0a9b3ec887d74e12da697b05f755679e05daba89098ad"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\fel-antes-bootstrap-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/fel-antes-bootstrap-2026-10-29.json",
+      "bytes": 663,
+      "sha256": "c03c2354e7354d8cb370310de62deb968bc0924ac8aecf07781c99389afa814c"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\bootstrap-ums-2026-10-29.log",
+      "target": "evidence/private/2026-10-29/bootstrap-ums-2026-10-29.log",
+      "bytes": 266,
+      "sha256": "bed2f057dd6d222bae1be3a1b4852d5bb73e4a5fddc59c5ceb5f75574c80e33c"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\prova-escrita-usb-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/prova-escrita-usb-2026-10-29.json",
+      "bytes": 508,
+      "sha256": "36e4a695bb941ff1dfbfdb8477939c58ec6ef5e9dcc709d306c86f2a775591b1"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\instalacao-usb-gravacao-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/instalacao-usb-gravacao-2026-10-29.json",
+      "bytes": 582,
+      "sha256": "9851178d0b1acc2715b72b2e799bd422e6dde663ce3024f4d641ff2c0b2280ea"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\instalacao-usb-boot-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/instalacao-usb-boot-2026-10-29.json",
+      "bytes": 2394,
+      "sha256": "b97993fabfe444577e31cfdb36f05151f0a8e5ab7bf238d1d14a4250e3757a43"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\ejetar-console-usb-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/ejetar-console-usb-2026-10-29.json",
+      "bytes": 193,
+      "sha256": "4a2d62576cdba588a8fe7e7165d57bb29d5370c50e863afb67448adfb7bb6ad0"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\perfil-original-para-boot-fel-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/perfil-original-para-boot-fel-2026-10-29.json",
+      "bytes": 6891,
+      "sha256": "b5d4728355e2d301ca7c77590fc378b44e5e2145be084c640c3cf39906ff18d0"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\preparo-cartao-fel-2026-10-29.json",
+      "target": "evidence/private/2026-10-29/preparo-cartao-fel-2026-10-29.json",
+      "bytes": 531,
+      "sha256": "ebee9f060deeaf840422ff86746498051a319615173399b458a00cf9db2cff64"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\06-testes-e-registros\\preparo-cartao-fel-2026-10-29.log",
+      "target": "evidence/private/2026-10-29/preparo-cartao-fel-2026-10-29.log",
+      "bytes": 2793,
+      "sha256": "bde6864ee43af74c103d4621d108856c9b8d194df3f4d9594003f77943e7af5d"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\01-projeto\\INSTALADOR-OBSISIDIAN-OS.md",
+      "target": "evidence/private/2026-10-29/contexto-origem/INSTALADOR-OBSISIDIAN-OS.md",
+      "bytes": 13091,
+      "sha256": "e2519d069ef16fb8c28147dd3b484225073a7a481b8715c33d8bfc101fb43020"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\01-projeto\\ESTADO-ATUAL.md",
+      "target": "evidence/private/2026-10-29/contexto-origem/ESTADO-ATUAL.md",
+      "bytes": 2709,
+      "sha256": "4d81923f134ce2e9bc2f2693694dcd2a539db1db3d1425a1d041175a92d43154"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\07-REA\\INVESTIGACAO-TF2.md",
+      "target": "evidence/private/2026-10-29/contexto-origem/INVESTIGACAO-TF2.md",
+      "bytes": 3291,
+      "sha256": "dacfa5cada18fce97c51ea9de3567ba142e4541df3401c0c40776fb90cdf9552"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\07-REA\\INVESTIGACAO-USB-OTG.md",
+      "target": "evidence/private/2026-10-29/contexto-origem/INVESTIGACAO-USB-OTG.md",
+      "bytes": 2657,
+      "sha256": "426bc8ecdbff2b8fbae5f0057854860f3a5bae93dfd972112bf24a2f93ec1c80"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\07-REA\\diagnostico-hardware-goodluck.txt",
+      "target": "evidence/private/2026-10-29/contexto-origem/diagnostico-hardware-goodluck.txt",
+      "bytes": 28669,
+      "sha256": "a2f1f2a6b60790015a510a15a7a89866c063a214b2b6bbe47a05a24ab016d0c8"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\01-projeto\\instalador\\diagnosticar-usb.ps1",
+      "target": "lab/legacy-2026-10-29/instalador/diagnosticar-usb.ps1.txt",
+      "bytes": 4504,
+      "sha256": "c1589d7161fb4be87355568aeecc2899f6369f1cc0fee701469fd1c6dea6486c"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\01-projeto\\instalador\\fel_version.py",
+      "target": "lab/legacy-2026-10-29/instalador/fel_version.py.txt",
+      "bytes": 6158,
+      "sha256": "b86449c00df183cd9b24fd2cc440d5adb5b1da75834edaedc9a0b9d38ed50513"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\01-projeto\\instalador\\testar-diagnostico.ps1",
+      "target": "lab/legacy-2026-10-29/instalador/testar-diagnostico.ps1.txt",
+      "bytes": 2170,
+      "sha256": "ad5f656cb50e4617d6d13f8bde2c6be528056871ae0dd20731e2bffc7d22816d"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\01-projeto\\instalador\\test_fel_version.py",
+      "target": "lab/legacy-2026-10-29/instalador/test_fel_version.py.txt",
+      "bytes": 2457,
+      "sha256": "8100c1d13c18dad7f1127ac6af3e6cf36cb1323cbffa6bd9352e941ffe50c70b"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\01-projeto\\instalador\\verify_usb_install_boot.py",
+      "target": "lab/legacy-2026-10-29/instalador/verify_usb_install_boot.py.txt",
+      "bytes": 3170,
+      "sha256": "68906188b2b863649e9fb2e07a742700195913746b7efb5f9576aef8bba980dd"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\prepare-proof-image.py",
+      "target": "lab/legacy-2026-10-29/build/prepare-proof-image.py.txt",
+      "bytes": 3485,
+      "sha256": "f2898bd093e77d194e3ec4ef139651c805bb392284a614dd8b70b6e51c88322e"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\write-proof-image.ps1",
+      "target": "lab/legacy-2026-10-29/build/write-proof-image.ps1.txt",
+      "bytes": 6922,
+      "sha256": "1c604c337c88c6b937494a7e6d95153ecc10ede10add777932d6b48d516552d9"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\start-proof-write.ps1",
+      "target": "lab/legacy-2026-10-29/build/start-proof-write.ps1.txt",
+      "bytes": 376,
+      "sha256": "3b09b33407c75b2d82f112cfdb21b531300c19d47a1daa3729e79337b36a95c2"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\build-uboot-fel.sh",
+      "target": "lab/legacy-2026-10-29/build/build-uboot-fel.sh.txt",
+      "bytes": 2082,
+      "sha256": "d7bc68f53d4793faa2369f24ad33bf9b99d9bd2757cd739032e871d77cbc1950"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\S98obsisidian-usb-proof",
+      "target": "lab/legacy-2026-10-29/build/S98obsisidian-usb-proof.txt",
+      "bytes": 1108,
+      "sha256": "cebc96bb9b7af38294bdb226e6304e9180939488d1a443bfbb9a30817a7a6ca5"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\proof-target.json",
+      "target": "evidence/private/2026-10-29/proof-target.json",
+      "bytes": 508,
+      "sha256": "36e4a695bb941ff1dfbfdb8477939c58ec6ef5e9dcc709d306c86f2a775591b1"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\proof-image\\manifest.json",
+      "target": "evidence/private/2026-10-29/image-manifest.json",
+      "bytes": 589,
+      "sha256": "72aaea404e463735c2b79cc919afb38bc7513a6ecb1b12b641b6af431c8420ea"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\out\\uboot-final.config",
+      "target": "build/bootstrap/validated-final.config",
+      "bytes": 52595,
+      "sha256": "1dd6f90ee53ea419e5ae93c3712aa7122227b0569dbdaa6b3a8d5adc71c5bcf4"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\obsisidian-ga36-fel_defconfig",
+      "target": "build/bootstrap/ga36-a33-rhododendron_defconfig",
+      "bytes": 1105,
+      "sha256": "936a00b905bc54f656484470c373107c0deecd03f9e2dae739aaea65f4e974f0"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\0001-usb-gadget-init.patch",
+      "target": "build/bootstrap/0001-usb-gadget-init.patch",
+      "bytes": 1417,
+      "sha256": "555fc72afe292b56c50ea39df4d041fa6414365d451a39560417da355699f10a"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\out\\source-archive.sha256",
+      "target": "build/bootstrap/source-archive.sha256",
+      "bytes": 79,
+      "sha256": "7563119d19594a07be46d629070783a9b39d5e6ad90d492460d56e7e9b54c06f"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\S98obsisidian-usb-proof",
+      "target": "build/bootstrap/S98installation-proof.reference",
+      "bytes": 1108,
+      "sha256": "cebc96bb9b7af38294bdb226e6304e9180939488d1a443bfbb9a30817a7a6ca5"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\build\\out\\obsisidian-ga36-fel-ums.bin",
+      "target": "assets/bootstrap/ga36-a33-rhododendron-panel1/bootstrap.bin",
+      "bytes": 528912,
+      "sha256": "433cd84c1b0c92b49afc251b543b83a5b054de682d494dae26359562ba86ccdc"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\sunxi-tools-win\\sunxi-tools-mingw64-530adfa\\sunxi-fel.exe",
+      "target": "assets/native/windows-x64/sunxi-fel.exe",
+      "bytes": 305152,
+      "sha256": "cc1e338a238ab99dc0ca12bdb3558d2781f9e81ed411a9b92d1c4021a67a2acf"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\fontes-referencia\\LICENSE.md",
+      "target": "third_party/licenses/sunxi-tools-LICENSE.md",
+      "bytes": 17774,
+      "sha256": "a86425c18b019d34f9bdd90d927cf400b6239a96c63e3c2af1195abb37c78d2c"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\fontes-referencia\\build-sunxi-tools-mingw64.sh",
+      "target": "third_party/build-sunxi-tools-mingw64.sh.reference",
+      "bytes": 3233,
+      "sha256": "55d177dc2507d378769041d12b4e6440d553a36ef775b6fee870d2273dfef3a5"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\fontes-referencia\\proveniencia-fontes.json",
+      "target": "third_party/proveniencia-fontes.original.json",
+      "bytes": 1161,
+      "sha256": "f049c701e286fd413b227102f2d899b0223422387b8f233b0ab5f8d1097fa5c2"
+    },
+    {
+      "source": "D:\\R36S-sistema-novo\\04-ferramentas\\FEL\\dependencias-verificadas.json",
+      "target": "third_party/dependencias-python-laboratorio.json",
+      "bytes": 1339,
+      "sha256": "8982fd16cf6bf5b7eb6af76f06301a557ea36d9e5e233fe8e3a1fb60da15b029"
+    }
+  ]
+}

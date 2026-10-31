@@ -1,0 +1,13 @@
+﻿
+Microsoft DiskPart versão 10.0.26100.1150
+
+Copyright (C) Microsoft Corporation.
+No computador: DESKTOP-CVKBV4T
+
+O disco 2 é o disco selecionado.
+
+DiskPart está limpando o disco.
+
+Saindo do Diskpart...
+
+RESULTADO: VERIFICAR (cÃ³digo 0)

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObsidianInstaller.Core\ObsidianInstaller.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- WMI: o Windows nega abrir \\.\PhysicalDriveN sem elevação; listar
+         cartões precisa funcionar antes do UAC. -->
+    <PackageReference Include="System.Management" Version="9.0.0" />
+  </ItemGroup>
+</Project>

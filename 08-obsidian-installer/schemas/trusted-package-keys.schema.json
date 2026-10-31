@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:obsidian:trusted-package-keys:v1",
+  "title": "Obsidian trusted package signing keys v1",
+  "type": "object",
+  "required": ["schema_version", "keys"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "keys": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "required": ["key_id", "algorithm", "public_key_pem", "revoked"],
+        "additionalProperties": false,
+        "properties": {
+          "key_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"},
+          "algorithm": {"const": "ecdsa-p256-sha256-der"},
+          "public_key_pem": {"type": "string", "minLength": 64, "maxLength": 2048, "pattern": "^-----BEGIN PUBLIC KEY-----"},
+          "revoked": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <AssemblyName>ObsidianInstaller</AssemblyName>
+    <RootNamespace>ObsidianInstaller.App</RootNamespace>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObsidianInstaller.Core\ObsidianInstaller.Core.csproj" />
+    <ProjectReference Include="..\ObsidianInstaller.Windows\ObsidianInstaller.Windows.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\profiles\*.json">
+      <Link>profiles\%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\trust\trusted-package-keys.json">
+      <Link>trusted-package-keys.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <!-- Bootstrap do console: carregador de RAM (u-boot) e ferramenta FEL. -->
+    <Content Include="assets\bootstrap\bootstrap.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\sunxi-fel.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\sunxi-tools-LICENSE.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Fonte do site Obsidian OS (Sora), embarcada no aplicativo. -->
+    <Resource Include="Assets\Sora.ttf" />
+    <Resource Include="Assets\Sora-SemiBold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Arte da splash do console (gameman-assets/library/opening.png). -->
+    <Content Include="Assets\splash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\app-icon-1024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+      <Content Include="Assets\splash-system.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
