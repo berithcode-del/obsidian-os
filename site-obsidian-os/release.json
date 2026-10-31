@@ -1,11 +1,13 @@
 {
-  "status": "preparing",
-  "version": null,
+  "status": "available",
+  "version": "1.0",
   "installer": {
-    "url": null,
-    "fileName": null,
-    "sha256": null,
+    "url": "https://github.com/berithcode-del/obsidian-os/releases/download/v1.0-r3/ObsidianOS-1.0-Instalador-win64.zip",
+    "fileName": "ObsidianOS-1.0-Instalador-win64.zip",
+    "sha256": "5a081302381cbfa3c2d8fefc00cf17dc9609121a9bc27cd0a50c8b2285211748",
     "platform": "Windows 10/11, 64 bits"
   },
-  "supportProfile": null
+  "supportProfile": [
+    "GA36 / R36S (Allwinner A33, painel 1)"
+  ]
 }

@@ -7,6 +7,8 @@ personalização em um só lugar, com um instalador que grava o cartão sozinho.
 
 ## Baixar
 
+**[Baixar o Obsidian OS 1.0 (v1.0-r3)](https://github.com/berithcode-del/obsidian-os/releases/latest)** — instalador com a imagem embutida.
+
 O instalador e a imagem são publicados em **Releases** (arquivos grandes não entram
 no histórico do Git):
 

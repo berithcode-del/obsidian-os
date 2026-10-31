@@ -18,7 +18,13 @@ with sync_playwright() as p:
     page.screenshot(path=str(OUT / 'desktop.png'), full_page=True)
     page.locator('.hero').screenshot(path=str(OUT / 'hero.png'))
     assert page.locator('#hero-screen .ui-tile').count() == 6
-    assert page.locator('#download-action').get_attribute('href') is None
+    release_meta = json.loads((Path(__file__).parent.parent / 'release.json').read_text(encoding='utf-8'))
+    href = page.locator('#download-action').get_attribute('href')
+    if release_meta.get('status') == 'available':
+        assert href and href.endswith('apoie.html'), href
+        assert release_meta['version'] in page.locator('#release-title').inner_text()
+    else:
+        assert href is None
     assert page.locator('[role=tab]').count() == 8
     for menu in ['home', 'games', 'favorites', 'reading', 'videos', 'themes', 'settings', 'power']:
         page.locator('#tab-' + menu).click()
@@ -117,15 +123,15 @@ with sync_playwright() as p:
     release = {'status': 'available', 'version': '1.0-test', 'supportProfile': ['Perfil de teste'], 'installer': {'url': 'https://example.test/obsidian.exe', 'fileName': 'obsidian.exe', 'sha256': 'a' * 64}}
     page.route('**/release.json', lambda route: route.fulfill(json=release))
     page.reload(wait_until='networkidle')
-    assert page.locator('#download-action').get_attribute('href') == 'https://example.test/obsidian.exe'
+    assert page.locator('#download-action').get_attribute('href').endswith('apoie.html')
     assert 'Perfil de teste' in page.locator('#release-description').inner_text()
     release['installer']['url'] = 'javascript:alert(1)'
     page.reload(wait_until='networkidle')
-    assert page.locator('#download-action').get_attribute('href') is None
+    assert 'Perfil de teste' not in page.locator('#release-description').inner_text()
     release['installer']['url'] = 'https://example.test/obsidian.exe'
     release['installer']['sha256'] = 'invalid'
     page.reload(wait_until='networkidle')
-    assert page.locator('#download-action').get_attribute('href') is None
+    assert 'Perfil de teste' not in page.locator('#release-description').inner_text()
     result = {'result': 'passed', 'menus': 8, 'themes': 4, 'widths': [320,390,768,1024,1440], 'release_validation': 'passed', 'browser_errors': errors}
     (OUT / 'result.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
     print(json.dumps(result))
