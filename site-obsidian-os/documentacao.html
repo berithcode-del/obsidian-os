@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="obsidian">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Documentação do Obsidian OS: compatibilidade do console, cartão, formatos de jogos, livros e vídeos — leia antes de baixar ou apoiar o projeto.">
+  <meta property="og:title" content="Obsidian OS | Documentação">
+  <meta property="og:description" content="Compatibilidade, formatos suportados e o que o sistema faz, antes de baixar ou doar.">
+  <meta property="og:image" content="assets/hero-liberte-console.png">
+  <title>Obsidian OS | Documentação</title>
+  <link rel="icon" href="favicon.svg?v=obsidian-sete">
+  <link rel="preload" href="assets/Sora-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="documentacao.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="arrow" viewBox="0 0 32 32"><path d="M4 16h23M18 7l9 9-9 9"/></symbol>
+    <symbol id="cube" viewBox="0 0 32 32"><path d="m16 2 13 7.5v13L16 30 3 22.5v-13L16 2Z M3 9.5 16 17l13-7.5M16 17v13"/></symbol>
+  </svg>
+
+
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="Obsidian OS, início">
+      <img class="brand-mark" src="favicon.svg?v=obsidian-sete" alt="">
+      OBSIDIAN <b>OS</b>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html#experiencia">Explore o sistema</a>
+      <a href="index.html#temas">Temas</a>
+      <a href="documentacao.html" aria-current="page">Documentação</a>
+    </nav>
+    <a class="header-download" href="apoie.html">Download <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#arrow"/></svg></a>
+  </header>
+
+  <main id="conteudo">
+    <section class="doc-hero">
+      <p class="eyebrow"><span></span> ANTES DE BAIXAR · ANTES DE APOIAR</p>
+      <h1>Documentação<br>do <em>Obsidian OS.</em></h1>
+      <p class="lead">
+        O que o sistema faz, em quais consoles funciona, quais arquivos ele lê e o que acontece com o seu cartão.
+        Leia esta página antes de doar ou de baixar — ela existe para você não perder tempo nem cartão.
+      </p>
+      <div class="chips">
+        <span class="chip">Placa <strong>GA36</strong></span>
+        <span class="chip">SoC <strong>Allwinner A33</strong></span>
+        <span class="chip">Tela <strong>640 × 480</strong></span>
+        <span class="chip">Cartão <strong>microSD · 16 GB recomendado</strong></span>
+        <span class="chip">Versão <strong>1.0 · canal lab</strong></span>
+      </div>
+    </section>
+
+    <div class="doc-wrap">
+
+      <section class="doc-section" id="compatibilidade">
+        <div class="doc-side">
+          <p class="eyebrow">01 / COMPATIBILIDADE</p>
+          <h2>Em qual console funciona</h2>
+        </div>
+        <div>
+          <p>
+            O Obsidian OS é feito para a família de portáteis que usa a placa <strong>GA36</strong> com o
+            processador <strong>Allwinner A33</strong> e a tela de 640 × 480. É a mesma placa vendida como
+            <strong>R36S</strong> e por várias marcas paralelas — o nome na caixa muda, a placa é a mesma.
+          </p>
+          <table class="doc-table">
+            <thead>
+              <tr><th>Item</th><th>Especificação</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Placa / perfil</td><td><code>ga36-a33-rhododendron-panel1</code></td></tr>
+              <tr><td>Processador</td><td>Allwinner A33 · 4 núcleos Cortex-A7 · GPU Mali-400</td></tr>
+              <tr><td>Tela</td><td>640 × 480 (painel 1)</td></tr>
+              <tr><td>Armazenamento</td><td>microSD: <strong>TF1</strong> = sistema · <strong>TF2</strong> = jogos e conteúdo</td></tr>
+              <tr><td>Sistema de origem</td><td>goodluckOS / GameMan (o menu com 8 ícones e o launcher <code>gameman</code>)</td></tr>
+              <tr><td>Modo de gravação</td><td>FEL <code>1F3A:EFE8</code> (carregador na RAM) e UMS <code>1F3A:1010</code></td></tr>
+            </tbody>
+          </table>
+
+          <h3>Como conferir se o seu console é compatível</h3>
+          <ol class="steps-doc">
+            <li>Ligue o console com o cartão original: se aparecer a estante com os 8 ícones do GameMan, é a família certa.</li>
+            <li>Com o console desligado e o cabo no computador, o Windows deve listar <code>1F3A:EFE8</code> — é o modo FEL dessa placa.</li>
+            <li>O instalador recusa qualquer disco que não seja USB e nunca toca no disco do sistema operacional.</li>
+          </ol>
+
+          <div class="callout">
+            <p><strong>Não é compatível</strong> com aparelhos de outra placa ou outro processador (RK3326, H700, Allwinner H3, Android, Nintendo, Anbernic de outra família). Se o seu console não liga com o cartão original na estante do GameMan, o Obsidian OS não vai iniciar nele.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="cartao">
+        <div class="doc-side">
+          <p class="eyebrow">02 / CARTÃO</p>
+          <h2>O que acontece com o cartão</h2>
+        </div>
+        <div>
+          <p>
+            A gravação <strong>apaga todo o conteúdo do cartão</strong> e cria três áreas:
+          </p>
+          <table class="doc-table">
+            <thead><tr><th>Área</th><th>Tamanho</th><th>Formato</th><th>Para que serve</th></tr></thead>
+            <tbody>
+              <tr><td>Boot + sistema</td><td>128 MiB + 384 MiB</td><td>bruto + ext4</td><td>Inicialização, kernel e o sistema Obsidian OS</td></tr>
+              <tr><td>Home</td><td>512 MiB</td><td>FAT32</td><td>Launcher, ajustes, temas, saves e capas</td></tr>
+              <tr><td>Dados <code>OBSIDIAN</code></td><td>resto do cartão</td><td>FAT32</td><td>Seus arquivos: <code>leitura/</code>, <code>videos/</code>, <code>saves/</code></td></tr>
+            </tbody>
+          </table>
+          <ul>
+            <li>Mínimo <strong>2 GB</strong>; recomendado <strong>16 GB</strong> (o sistema usa cerca de 1 GB).</li>
+            <li>Use um cartão só para o sistema. O cartão do dia a dia não é um bom destino.</li>
+            <li>Nunca desligue o console durante a gravação: se interromper, grave novamente do zero.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="doc-section" id="funcoes">
+        <div class="doc-side">
+          <p class="eyebrow">03 / SISTEMA</p>
+          <h2>O que o sistema faz</h2>
+        </div>
+        <div>
+          <div class="doc-cards">
+            <article class="doc-card">
+              <span class="tag">Jogos</span>
+              <h4>5 sistemas</h4>
+              <p>GBA (MGBA), SNES (Snes9x2005), PSP (PPSSPP), Nintendo DS (DraStic) e arcade/CPS1-2-3/NeoGeo (FBNeo).</p>
+            </article>
+            <article class="doc-card">
+              <span class="tag">Leitura</span>
+              <h4>Estante de livros</h4>
+              <p>EPUB e CBZ, com progresso salvo, papel claro/escuro e ajuste de fonte.</p>
+            </article>
+            <article class="doc-card">
+              <span class="tag">Vídeos</span>
+              <h4>Player integrado</h4>
+              <p>MP4, M4V e MOV, direto do cartão de jogos ou da área de dados.</p>
+            </article>
+            <article class="doc-card">
+              <span class="tag">Temas</span>
+              <h4>4 identidades</h4>
+              <p>Obsidiana (padrão), Floresta Viva, Pôr do Sol e Cosmos Arcade.</p>
+            </article>
+            <article class="doc-card">
+              <span class="tag">Organização</span>
+              <h4>Estante e favoritos</h4>
+              <p>Capas, busca por sistema, favoritos e continuar de onde parou.</p>
+            </article>
+            <article class="doc-card">
+              <span class="tag">Ajustes</span>
+              <h4>Volume, brilho e energia</h4>
+              <p>Controle de volume, brilho da tela, suspender, reiniciar e desligar.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="formatos">
+        <div class="doc-side">
+          <p class="eyebrow">04 / ARQUIVOS</p>
+          <h2>Formatos e onde colocar</h2>
+        </div>
+        <div>
+          <p>
+            Os arquivos podem ficar no <strong>TF1</strong> (dentro da home, ao lado do launcher) ou no <strong>TF2</strong>
+            (cartão de jogos, montado em <code>/media/external</code>). A área <code>OBSIDIAN</code> também é lida.
+          </p>
+          <table class="doc-table">
+            <thead><tr><th>Tipo</th><th>Extensões</th><th>No TF1</th><th>No TF2</th></tr></thead>
+            <tbody>
+              <tr><td>Game Boy Advance</td><td><code>.gba</code> · <code>.zip</code></td><td><code>roms/gba</code></td><td><code>roms/gba</code></td></tr>
+              <tr><td>Super Nintendo</td><td><code>.sfc</code> · <code>.smc</code></td><td><code>roms/snes</code></td><td><code>roms/snes</code></td></tr>
+              <tr><td>PlayStation Portable</td><td><code>.iso</code> · <code>.cso</code></td><td><code>roms/psp</code></td><td><code>roms/psp</code></td></tr>
+              <tr><td>Nintendo DS</td><td><code>.nds</code></td><td><code>roms/nds</code></td><td><code>roms/nds</code></td></tr>
+              <tr><td>Arcade / CPS / NeoGeo</td><td><code>.zip</code></td><td><code>roms/cps1</code> · <code>roms/cps2</code> · <code>roms/cps3</code></td><td>mesmas pastas</td></tr>
+              <tr><td>Livros</td><td><code>.epub</code> · <code>.cbz</code></td><td><code>leitura/</code></td><td><code>leitura/</code></td></tr>
+              <tr><td>Vídeos</td><td><code>.mp4</code> · <code>.m4v</code> · <code>.mov</code></td><td><code>videos/</code></td><td><code>videos/</code></td></tr>
+              <tr><td>Capas</td><td><code>.png</code> · <code>.jpg</code></td><td><code>gameman-assets/</code></td><td>—</td></tr>
+              <tr><td>Saves</td><td><code>.sav</code> · <code>.srm</code></td><td><code>.config/retroarch/saves</code></td><td>—</td></tr>
+            </tbody>
+          </table>
+          <p>
+            No instalador, a tela opcional <strong>Restaurar conteúdo</strong> copia esses arquivos para o destino
+            escolhido mantendo a estrutura de pastas.
+          </p>
+        </div>
+      </section>
+
+      <section class="doc-section" id="antes-de-baixar">
+        <div class="doc-side">
+          <p class="eyebrow">05 / ANTES DE BAIXAR</p>
+          <h2>Checklist e download</h2>
+        </div>
+        <div>
+          <ol class="steps-doc">
+            <li>Windows 10 ou 11, 64 bits, e um cartão microSD de 16 GB (o conteúdo dele será apagado).</li>
+            <li>Console <strong>desligado</strong>, cabo USB no computador e <strong>sem o cartão</strong> — assim ele entra em modo FEL.</li>
+            <li>Baixe o pacote (instalador com a imagem embutida) e confira o SHA-256 publicado na página da release.</li>
+            <li>Abra o instalador, clique em <em>Continuar</em>, insira o cartão, confirme e grave.</li>
+            <li>Ao terminar, <strong>desconecte o cabo</strong> e ligue o console — ele não liga conectado ao computador.</li>
+          </ol>
+          <div class="callout">
+            <p><strong>Aviso do Windows:</strong> o executável ainda não é assinado digitalmente, então o SmartScreen pode pedir “Executar mesmo assim”. O SHA-256 na release permite conferir que o arquivo é o nosso.</p>
+          </div>
+          <div class="doc-cta">
+            <a class="button primary" href="apoie.html">Ir para o download <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#arrow"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="antes-de-doar">
+        <div class="doc-side">
+          <p class="eyebrow">06 / ANTES DE APOIAR</p>
+          <h2>Para onde vai a doação</h2>
+        </div>
+        <div>
+          <p>
+            O Obsidian OS é um projeto independente. A contribuição paga <strong>tempo e material de desenvolvimento</strong>:
+            cartões para teste, ferramentas, energia elétrica e as horas de trabalho em cada correção.
+          </p>
+          <ul>
+            <li><strong>Não inclui jogos, ROMs, livros ou vídeos.</strong> Nada de conteúdo de terceiros acompanha o sistema.</li>
+            <li>Você usa <strong>os seus próprios arquivos</strong>, obtidos de forma legal. O projeto não distribui nem indica fontes de ROMs ou livros.</li>
+            <li>Versão <strong>1.0 · canal lab</strong>: o aparelho é suportado, mas ainda faltam assinatura digital e testes em mais lotes de placa.</li>
+            <li>Não há garantia de funcionamento em consoles paralelos de fabricantes diferentes — confira a placa antes.</li>
+          </ul>
+          <div class="doc-cta">
+            <a class="button primary" href="apoie.html">Apoiar o projeto <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#arrow"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="duvidas">
+        <div class="doc-side">
+          <p class="eyebrow">07 / DÚVIDAS</p>
+          <h2>Perguntas rápidas</h2>
+        </div>
+        <div class="doc-faq">
+          <details>
+            <summary>Preciso de leitor de cartão?</summary>
+            <p>Não. O instalador envia um carregador para a memória do console e o próprio console expõe o cartão como disco USB. Um leitor só deixa a gravação mais rápida.</p>
+          </details>
+          <details>
+            <summary>Perco o sistema original do console?</summary>
+            <p>O cartão é apagado, mas nada no console é alterado: o sistema original vive no cartão. Guarde o cartão original se quiser voltar.</p>
+          </details>
+          <details>
+            <summary>Funciona em qualquer R36S?</summary>
+            <p>Funciona nos aparelhos com a placa GA36/Allwinner A33 da família. Existem lotes e marcas paralelas com outra placa — nesses o sistema não inicia.</p>
+          </details>
+          <details>
+            <summary>O console não liga conectado ao computador. É defeito?</summary>
+            <p>Não. Ele só liga desconectado. Para gravar, ele fica desligado com o cabo conectado e sem o cartão; para jogar, desconecte o cabo e ligue.</p>
+          </details>
+          <details>
+            <summary>O sistema vem com jogos ou livros?</summary>
+            <p>Não. Você adiciona a sua própria coleção nas pastas indicadas acima.</p>
+          </details>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="doc-back">
+      <a href="index.html">← Voltar para a página inicial</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="index.html"><img class="brand-mark" src="favicon.svg?v=obsidian-sete" alt=""> OBSIDIAN <b>OS</b></a>
+    <p>Uma nova vida para o seu portátil.</p>
+    <a href="apoie.html">Apoiar o projeto</a>
+  </footer>
+</body>
+</html>

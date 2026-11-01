@@ -1,0 +1,297 @@
+/* Documentação — herda os tokens de styles.css (tema obsidian). */
+
+.doc-hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 84px 5% 20px;
+}
+
+.doc-hero h1 {
+  font-family: var(--heading);
+  font-size: clamp(44px, 5.4vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  margin: 18px 0 18px;
+  color: var(--ink);
+}
+
+.doc-hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.doc-hero .lead {
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.chip strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.doc-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 5% 90px;
+  display: grid;
+  gap: 64px;
+}
+
+.doc-section {
+  border-top: 1px solid var(--line);
+  padding-top: 34px;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.doc-section > .doc-side {
+  position: sticky;
+  top: 24px;
+}
+
+.doc-section h2 {
+  font-family: var(--heading);
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  color: var(--ink);
+  margin: 8px 0 0;
+}
+
+.doc-section h3 {
+  font-family: var(--heading);
+  font-size: 17px;
+  color: var(--ink);
+  margin: 26px 0 10px;
+}
+
+.doc-section p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.doc-section ul {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.doc-section li::marker {
+  color: var(--accent);
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 6px 0 8px;
+}
+
+.doc-table th,
+.doc-table td {
+  text-align: left;
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.doc-table th {
+  color: var(--ink);
+  font-family: var(--heading);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.doc-table td {
+  color: var(--muted);
+}
+
+.doc-table td code,
+.doc-section code {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 12px;
+  color: var(--accent);
+  background: #ffffff0d;
+  border-radius: 5px;
+  padding: 1px 6px;
+}
+
+.doc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.doc-card {
+  background: linear-gradient(180deg, #141414 0%, #060606 100%);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.doc-card h4 {
+  font-family: var(--heading);
+  font-size: 15px;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.doc-card p {
+  font-size: 12.5px;
+  margin: 0;
+}
+
+.doc-card .tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.callout {
+  border: 1px solid #5a2e12;
+  background: #120a05;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 18px 0 6px;
+}
+
+.callout strong {
+  color: #ffb27a;
+}
+
+.callout p {
+  margin: 0;
+  color: #e7c7ae;
+  font-size: 13px;
+}
+
+.steps-doc {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.steps-doc li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 16px 40px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.steps-doc li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.doc-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.doc-faq {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.doc-faq details {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #050505;
+}
+
+.doc-faq summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.doc-faq p {
+  margin: 10px 0 0;
+}
+
+.doc-back {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 5% 70px;
+}
+
+.doc-back a {
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.doc-back a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .doc-section {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .doc-section > .doc-side {
+    position: static;
+  }
+
+  .doc-hero {
+    padding-top: 56px;
+  }
+}
+
+/* marca no topo (o styles.css dimensiona apenas o s�mbolo SVG do index) */
+.header .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.header .brand .brand-mark{width:26px;height:26px;display:block}
+.header .brand b{color:var(--accent);font-weight:700}
+.footer .brand .brand-mark{width:22px;height:22px;display:block}
+.footer .brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none}
+

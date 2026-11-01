@@ -35,6 +35,8 @@ grava, relê e cria a área `OBSIDIAN` (FAT32) com `leitura/`, `videos/` e `save
 
 ## Documentação
 
+- **Antes de baixar ou apoiar:** [site-obsidian-os/documentacao.html](site-obsidian-os/documentacao.html) — compatibilidade da placa, o que acontece com o cartão, formatos de jogos/livros/vídeos e para onde vai a doação.
+
 - `08-obsidian-installer/docs/GUIA-INSTALACAO-1.0.md` — instalação completa
 - `08-obsidian-installer/docs/NOTAS-DA-VERSAO-1.0.md` — notas da versão
 - `08-obsidian-installer/docs/PUBLICAR-NO-GITHUB.md` — como publicar a release

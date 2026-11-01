@@ -251,12 +251,12 @@
       link.removeAttribute('aria-disabled');
       link.classList.remove('is-disabled');
       link.textContent = 'Ir para download ↗';
-      $('#release-eyebrow').textContent = 'SUA PRÓXIMA FASE COMEÇA AQUI';
+      $('#release-eyebrow').textContent = 'VERSÃO DE TESTES DISPONÍVEL';
       $('#release-title').textContent = `Obsidian OS ${release.version}`;
-      $('#release-description').textContent = `Perfis compatíveis: ${profile}`;
+      $('#release-description').textContent = `Versão de testes. Perfis compatíveis: ${profile}`;
       $('#release-meta').textContent = `${installer.platform || 'Windows'} · ${installer.fileName}`;
       $('#release-footnote').textContent = `SHA-256: ${installer.sha256}`;
-      $('#faq-availability').textContent = `Sim. A versão ${release.version} está disponível nesta página para os perfis: ${profile}.`;
+      $('#faq-availability').textContent = `A versão de testes ${release.version} está disponível para os perfis: ${profile}.`;
     } catch { /* Keep the preparing state if release metadata cannot be read. */ }
   }
   loadRelease();
